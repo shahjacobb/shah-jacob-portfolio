@@ -10,6 +10,7 @@ Personal portfolio site built with [Astro](https://astro.build).
 - [ ] adjust tool/tech tag sizes on homepage
 - [x] remove about page and update navigation
 - [ ] create resume page
+- [ ] update bio and add hyperlink to 'pages/projects'
 - [ ] list project directory structure
 - [x] deploy with [netlify](https://docs.astro.build/en/guides/deploy/netlify/)
 
