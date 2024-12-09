@@ -1,0 +1,51 @@
+---
+interface Props {
+  driveLink: string;
+  buttonText?: string;
+}
+
+const { driveLink, buttonText = "View My Resume" } = Astro.props;
+---
+
+<a href={driveLink} target="_blank" rel="noopener" class="resume-button">
+  {buttonText} →
+</a>
+
+<style>
+  .resume-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: rgba(247, 198, 111, 0.1);
+    color: #f7c66f;
+    border: 1px solid rgba(247, 198, 111, 0.2);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .resume-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(247, 198, 111, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .resume-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(247, 198, 111, 0.2);
+  }
+
+  .resume-button:hover::before {
+    transform: translateX(0);
+  }
+</style> 
