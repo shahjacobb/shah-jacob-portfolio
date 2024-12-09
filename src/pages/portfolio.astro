@@ -1,0 +1,115 @@
+---
+import DarkLayout from '../layouts/DarkLayout.astro';
+---
+
+<DarkLayout title="Portfolio - Shah Jacob">
+  <section class="portfolio">
+    <h1>Portfolio Projects</h1>
+    
+    <div class="projects">
+      <article class="project">
+        <h2>YFinance Market Data Observability Platform</h2>
+        <p class="description">
+          An observability platform that tracks API latency, errors, and traces for the Yahoo Finance API. Built with OpenTelemetry, Prometheus, and Grafana, running in Docker containers.
+        </p>
+        <div class="tech-stack">
+          <span>OpenTelemetry</span>
+          <span>Prometheus</span>
+          <span>Grafana</span>
+          <span>Docker</span>
+          <span>Python</span>
+        </div>
+        <div class="links">
+          <a href="https://github.com/shahjacobb/Market-Data-API-Observability-Platform" class="project-link">
+            View Project →
+          </a>
+        </div>
+      </article>
+
+      <!-- Add more projects here with the same structure -->
+    </div>
+  </section>
+</DarkLayout>
+
+<style>
+  .portfolio {
+    padding: 2rem 0;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(to right, #fff, #888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .projects {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .project {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+
+  .project:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin: 0 0 1rem 0;
+    color: #fff;
+  }
+
+  .description {
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tech-stack span {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #fff;
+  }
+
+  .links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .project-link {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .project-link:hover {
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .project {
+      padding: 1.5rem;
+    }
+  }
+</style> 

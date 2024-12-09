@@ -1,0 +1,87 @@
+import DarkLayout from '../layouts/DarkLayout.astro';
+
+<DarkLayout title="Contact - Shah Jacob">
+  <section class="contact">
+    <h1>Contact</h1>
+    
+    <div class="contact-info">
+      <div class="contact-item">
+        <span class="label">Email:</span>
+        <a href="mailto:shahjacob98@gmail.com" class="value">shahjacob98@gmail.com</a>
+      </div>
+      
+      <div class="contact-item">
+        <span class="label">Phone:</span>
+        <a href="tel:+16462465894" class="value">646 246 5894</a>
+      </div>
+    </div>
+  </section>
+</DarkLayout>
+
+<style>
+  .contact {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    font-weight: 600;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .label {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+  }
+
+  .value {
+    font-size: 1.5rem;
+    color: var(--text);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+
+  .value:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
+
+    .contact-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .label {
+      font-size: 1.2rem;
+    }
+
+    .value {
+      font-size: 1.2rem;
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style> 
