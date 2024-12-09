@@ -1,6 +1,7 @@
 ---
 import DarkLayout from '../layouts/DarkLayout.astro';
 ---
+
 <DarkLayout>
   <section class="hero">
     <div class="profile-image">
@@ -14,7 +15,8 @@ import DarkLayout from '../layouts/DarkLayout.astro';
       
       <p class="experience">
         I most recently interned at <a href="https://www.pharmesol.com/">Pharmesol AI</a>, helping out build out their backend APIs using <a href="https://fastapi.tiangolo.com/">FastAPI</a> and integrating LLM Voice Agents using <a href="https://retell.ai">Retell AI</a>.
-     I also was responsible for creating dashboards in React using <a href = "https://tremor.so/"> TremorJS </a></p>
+        I also was responsible for creating dashboards in React using <a href="https://tremor.so/">TremorJS</a>
+      </p>
 
       <p class="interests">
         I'm now most interested in backend engineering, with a focus on observability, containerization, and distributed systems.
@@ -87,6 +89,12 @@ import DarkLayout from '../layouts/DarkLayout.astro';
     margin-bottom: 3rem;
     font-weight: 600;
     text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.3rem;
+    }
   }
 
   h2 {
@@ -202,7 +210,10 @@ import DarkLayout from '../layouts/DarkLayout.astro';
     }
 
     h1 {
-      font-size: 3rem;
+      font-family: "Merriweather", serif;
+      font-weight: Lig;
+      font-size: 2.3rem;
+      font-style: normal;
     }
 
     h2 {
@@ -225,26 +236,26 @@ import DarkLayout from '../layouts/DarkLayout.astro';
 
   /* Main content text */
   p, .content p {
-    font-size: 1.15rem;  /* Base size for mobile */
+    font-size: 1.15rem;
     line-height: 1.6;
     color: #ffffff;
   }
 
   @media (min-width: 768px) {
     p, .content p {
-      font-size: 1.25rem;  /* Larger for desktop */
+      font-size: 1.25rem;
     }
   }
 
   /* Skills section text */
   .skill-category p {
-    font-size: 1.15rem;  /* Base size for mobile */
+    font-size: 1.15rem;
     line-height: 1.6;
   }
 
   @media (min-width: 768px) {
     .skill-category p {
-      font-size: 1.25rem;  /* Larger for desktop */
+      font-size: 1.25rem;
     }
   }
 </style>
