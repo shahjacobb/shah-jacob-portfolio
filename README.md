@@ -1,6 +1,6 @@
-# Shah Jacob Portfolio
+# Shah Jacob Personal Website
 
-Personal portfolio site built with [Astro](https://astro.build).
+[Personal site showcasing project work and resume](https://shahjacob.netlify.app/), built with [Astro](https://astro.build), deployed on [Netlify](https://www.netlify.com/).
 
 ## todo
 
