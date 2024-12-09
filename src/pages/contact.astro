@@ -1,87 +1,53 @@
+---
 import DarkLayout from '../layouts/DarkLayout.astro';
+---
 
-<DarkLayout title="Contact - Shah Jacob">
-  <section class="contact">
-    <h1>Contact</h1>
+<DarkLayout>
+  <div class="contact-container">
+    <h1>Contact Me</h1>
     
-    <div class="contact-info">
-      <div class="contact-item">
-        <span class="label">Email:</span>
-        <a href="mailto:shahjacob98@gmail.com" class="value">shahjacob98@gmail.com</a>
-      </div>
-      
-      <div class="contact-item">
-        <span class="label">Phone:</span>
-        <a href="tel:+16462465894" class="value">646 246 5894</a>
-      </div>
+    <div class="contact-item">
+      <span class="label">Phone</span>
+      <div class="detail">646-256-5894</div>
     </div>
-  </section>
+
+    <div class="contact-item">
+      <span class="label">Email</span>
+      <div class="detail">shahjacob98@gmail.com</div>
+    </div>
+  </div>
 </DarkLayout>
 
 <style>
-  .contact {
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .contact-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 4rem 2rem;
   }
 
-  h1 {
-    font-size: 4rem;
-    margin-bottom: 4rem;
-    font-weight: 600;
-  }
-
-  .contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
   .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    margin: 3rem 0;
   }
 
   .label {
-    font-size: 1.5rem;
-    color: var(--text-secondary);
+    font-family: "Merriweather", serif;
+    font-size: 1.8rem;
+    color: #f7c66f;
+    display: block;
+    margin-bottom: 1rem;
   }
 
-  .value {
-    font-size: 1.5rem;
-    color: var(--text);
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    transition: all 0.2s ease;
-  }
-
-  .value:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
-  }
-
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 3rem;
-    }
-
-    .contact-item {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.5rem;
-    }
-
-    .label {
-      font-size: 1.2rem;
-    }
-
-    .value {
-      font-size: 1.2rem;
-      width: 100%;
-      text-align: center;
-    }
+  .detail {
+    font-family: "Geist", sans-serif;
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin-top: 0.5rem;
   }
 </style> 
