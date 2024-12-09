@@ -222,4 +222,29 @@ import DarkLayout from '../layouts/DarkLayout.astro';
     color: inherit;
     border-bottom: none;
   }
+
+  /* Main content text */
+  p, .content p {
+    font-size: 1.15rem;  /* Base size for mobile */
+    line-height: 1.6;
+    color: #ffffff;
+  }
+
+  @media (min-width: 768px) {
+    p, .content p {
+      font-size: 1.25rem;  /* Larger for desktop */
+    }
+  }
+
+  /* Skills section text */
+  .skill-category p {
+    font-size: 1.15rem;  /* Base size for mobile */
+    line-height: 1.6;
+  }
+
+  @media (min-width: 768px) {
+    .skill-category p {
+      font-size: 1.25rem;  /* Larger for desktop */
+    }
+  }
 </style>

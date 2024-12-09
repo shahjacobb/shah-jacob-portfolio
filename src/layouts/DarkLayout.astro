@@ -20,7 +20,7 @@ const {
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
   </head>
   <body>
     <nav>
@@ -80,7 +80,7 @@ const {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 4rem;
+    padding: 1rem 2rem;
   }
 
   .logo a {
@@ -93,16 +93,36 @@ const {
   .nav-links {
     display: flex;
     gap: 2rem;
+    padding-right: 1rem;
   }
 
   .nav-links a {
-    color: var(--text);
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: italic;
+    color: #ffffff;
     text-decoration: none;
-    transition: color 0.2s ease;
+    margin-left: 2rem;
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      padding: 1rem;
+    }
+    
+    .nav-links {
+      padding-right: 0.5rem;
+    }
+
+    .nav-links a {
+      margin-left: 1rem;
+      font-size: 1rem;
+    }
   }
 
   .nav-links a:hover {
-    color: var(--text-secondary);
+    color: #f7c66f;
   }
 
   main {
