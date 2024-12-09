@@ -9,6 +9,7 @@ import ResumeButton from '../components/ResumeButton.astro';
       <img src="/images/headshot_oct_24.jpg" alt="Shah Jacob" />
     </div>
     <h1>Shah Jacob</h1>
+    <div class="name-separator"></div>
     <div class="content">
       <p class="intro">
         Hi! I'm a computer science student at Queens College, graduating in 2025, now seeking my first software engineering role.
@@ -65,6 +66,12 @@ import ResumeButton from '../components/ResumeButton.astro';
       </div>
     </div>
   </section>
+
+  <div class="built-with">
+    <p>
+      Built with <a href="https://astro.build">Astro</a> and deployed on <a href="https://netlify.com">Netlify</a>
+    </p>
+  </div>
 </DarkLayout>
 
 <style>
@@ -90,7 +97,7 @@ import ResumeButton from '../components/ResumeButton.astro';
 
   h1 {
     font-size: 4rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     font-weight: 600;
     text-align: center;
   }
@@ -117,7 +124,7 @@ import ResumeButton from '../components/ResumeButton.astro';
   }
 
   h3 {
-    font-size: 1.15rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
     color: #fff;
   }
@@ -169,7 +176,7 @@ import ResumeButton from '../components/ResumeButton.astro';
     color: #f7c66f;
     padding: 0.5em 1em;
     border-radius: 4px;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
 
   .skills {
@@ -261,5 +268,39 @@ import ResumeButton from '../components/ResumeButton.astro';
     .skill-category p {
       font-size: 1.25rem;
     }
+  }
+
+  .built-with {
+    text-align: center;
+    padding: 2rem 0 3rem;
+    margin-top: 2rem;
+  }
+
+  .built-with p {
+    font-size: 1.2rem;
+    color: #c2bfbf;
+  }
+
+  .built-with a {
+    color: #ffffff;
+    border-bottom-color: rgba(170, 170, 170, 0.3);
+  }
+
+  .built-with a:hover {
+    color: #f7c66f;
+    border-bottom-color: #f7c66f;
+  }
+
+  .name-separator {
+    height: 2px;
+    width: 200px;
+    margin: 0 auto 3rem;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(247, 198, 111, 0.6) 50%,
+      transparent 100%
+    );
+    box-shadow: 0 0 15px rgba(247, 198, 111, 0.2);
   }
 </style>
