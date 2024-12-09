@@ -1,51 +1,45 @@
 ---
+// typescript interface that defines what props this component can receive from parent components
 interface Props {
   driveLink: string;
   buttonText?: string;
 }
 
+// if no button text passed in when using component, defaults to "View My Resume"
 const { driveLink, buttonText = "View My Resume" } = Astro.props;
 ---
 
+<!-- target="_blank" opens in new tab, noopener prevents security exploits from opened tab -->
 <a href={driveLink} target="_blank" rel="noopener" class="resume-button">
   {buttonText} →
 </a>
 
 <style>
   .resume-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background: rgba(247, 198, 111, 0.1);
-    color: #f7c66f;
-    border: 1px solid rgba(247, 198, 111, 0.2);
-    border-radius: 6px;
+    /* inline-block gives us best of both worlds - can use margin/padding but stays inline with text */
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin: 1rem 0;
+    
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 2px solid #f7c66f;
+    border-radius: 8px;
+    
+    /* box-shadow creates glow effect - values are: x-offset y-offset blur-radius color */
+    /* rgba lets us set alpha transparency (0.3) for softer glow than solid color */
+    box-shadow: 0 4px 15px rgba(247, 198, 111, 0.3);
+    
     text-decoration: none;
     font-weight: 500;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    font-size: 1.2rem;
   }
 
-  .resume-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(247, 198, 111, 0.1);
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
+  /* mobile responsive - styles change when screen width goes below tablet size (768px) */
+  @media (max-width: 768px) {
+    .resume-button {
+      padding: 0.8rem 1.5rem;
+      font-size: 1.1rem;
+    }
   }
-
-  .resume-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 20px rgba(247, 198, 111, 0.2);
-  }
-
-  .resume-button:hover::before {
-    transform: translateX(0);
-  }
-</style> 
+</style>
