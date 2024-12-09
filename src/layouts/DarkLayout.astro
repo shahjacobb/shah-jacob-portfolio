@@ -1,9 +1,13 @@
 ---
 interface Props {
   title?: string;
+  description?: string;
 }
 
-const { title = "Shah Jacob - Software Engineer" } = Astro.props;
+const { 
+  title = "Shah Jacob - Software Engineering Intern",
+  description = "CS student at Queens College, interested in backend/infra and distributed systems with experience in full-stack engineering."
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -11,8 +15,8 @@ const { title = "Shah Jacob - Software Engineer" } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
