@@ -1,16 +1,18 @@
 ---
-import DarkLayout from '../layouts/DarkLayout.astro';
+import DarkLayout from "../layouts/DarkLayout.astro";
 ---
 
 <DarkLayout title="Portfolio - Shah Jacob">
   <section class="portfolio">
     <h1>Portfolio Projects</h1>
-    
-    <div class=@projects">
+
+    <div class="projects">
       <article class="project">
         <h2>YFinance Market Data Observability Platform</h2>
         <p class="description">
-          An observability platform that tracks API latency, errors, and traces for the Yahoo Finance API. Built with OpenTelemetry, Prometheus, and Grafana, running in Docker containers.
+          An observability platform that tracks API latency, errors, and traces
+          for the Yahoo Finance API. Built with OpenTelemetry, Prometheus, and
+          Grafana, running in Docker containers.
         </p>
         <div class="tech-stack">
           <span>OpenTelemetry</span>
@@ -20,13 +22,43 @@ import DarkLayout from '../layouts/DarkLayout.astro';
           <span>Python</span>
         </div>
         <div class="links">
-          <a href="https://github.com/shahjacobb/Market-Data-API-Observability-Platform" class="project-link">
+          <a
+            href="https://github.com/shahjacobb/Market-Data-API-Observability-Platform"
+            class="project-link"
+          >
             View Project →
           </a>
         </div>
       </article>
 
-      <!-- Add more projects here with the same structure -->
+      <article class="project">
+        <h2>AI Equity Research Assistant</h2>
+        <p class="description">
+          An AI-powered chatbot using RAG (Retrieval Augmented Generation) to
+          help investors analyze SEC filings through natural language
+          conversations. Built with vector search to intelligently process
+          10-K/10-Q reports, making financial research more accessible and
+          intuitive.
+        </p>
+        <p class="description">
+          Built in under 15 hours at the MongoDB GenAI Hackathon in April 2024.
+        </p>
+        <div class="tech-stack">
+          <span>MongoDB Atlas</span>
+          <span>OpenAI</span>
+          <span>LangChain</span>
+          <span>Nomic</span>
+          <span>Gradio</span>
+        </div>
+        <div class="links">
+          <a
+            href="https://github.com/CharlesYuan02/Mango10K"
+            class="project-link"
+          >
+            View Project →
+          </a>
+        </div>
+      </article>
     </div>
   </section>
 </DarkLayout>
@@ -53,7 +85,9 @@ import DarkLayout from '../layouts/DarkLayout.astro';
     background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     padding: 2rem;
-    transition: transform 0.2s ease, background 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease;
   }
 
   .project:hover {
@@ -112,4 +146,5 @@ import DarkLayout from '../layouts/DarkLayout.astro';
       padding: 1.5rem;
     }
   }
-</style> 
+</style>
+
