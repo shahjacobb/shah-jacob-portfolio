@@ -1,293 +1,319 @@
 ---
-import DarkLayout from '../layouts/DarkLayout.astro';
-import ResumeButton from '../components/ResumeButton.astro';
+import DarkLayout from "../layouts/DarkLayout.astro";
+import ResumeButton from "../components/ResumeButton.astro";
 ---
 
 <DarkLayout>
-  <section class="hero">
-    <div class="profile-image">
-      <img src="/images/headshot_oct_24.jpg" alt="Shah Jacob" />
-    </div>
-    <h1>Shah Jacob</h1>
-    <div class="content">
-      <p class="intro">
-        Hi! I'm a computer science student at Queens College, graduating in 2025, now seeking my first software engineering role.
-      </p>
-      
+	<section class="hero">
+		<div class="profile-image">
+			<img src="/images/headshot_oct_24.jpg" alt="Shah Jacob" />
+		</div>
+		<h1>Shah Jacob</h1>
+		<div class="content">
+			<p class="intro">
+				Hi! I'm a computer science student at Queens College, graduating
+				in 2025, now seeking my first software engineering role.
+			</p>
 
-      <p class="experience">
-        I most recently interned at <a href="https://www.pharmesol.com/">Pharmesol AI</a>, helping out build out their backend APIs using <a href="https://fastapi.tiangolo.com/">FastAPI</a> and integrating LLM Voice Agents using <a href="https://retell.ai">Retell AI</a>.
-        I also was responsible for creating dashboards in React using <a href="https://tremor.so/">TremorJS</a>
-      </p>
+			<p class="experience">
+				I most recently interned at <a href="https://www.pharmesol.com/"
+					>Pharmesol AI</a
+				>, helping out build out their backend APIs using <a
+					href="https://fastapi.tiangolo.com/">FastAPI</a
+				> and integrating LLM Voice Agents using <a
+					href="https://retell.ai">Retell AI</a
+				>. I also was responsible for creating dashboards in React using <a
+					href="https://tremor.so/">TremorJS</a
+				>
+			</p>
 
-      <p class="interests">
-        I'm now most interested in backend engineering, with a focus on observability, containerization, and distributed systems.
-      </p>
+			<p class="interests">
+				I'm now most interested in backend engineering, with a focus on
+				observability, containerization, and distributed systems.
+			</p>
 
-	  <ResumeButton driveLink="https://drive.google.com/file/d/1UL59Yi1oX8a7ih-yYYi5Gs01nriPyskb/view?usp=drive_link" buttonText="View My Resume" />
+			<ResumeButton
+				driveLink="https://drive.google.com/file/d/1XTXsoeex9uPw3eJb6eLQqSd45L89Y-hv/view?usp=sharing"
+				buttonText="View My Resume"
+			/>
 
-      <div class="current-work">
-        <h2>What I'm building right now:</h2>
-        <a href="https://github.com/shahjacobb/Market-Data-API-Observability-Platform" class="project-link">
-          <div class="project">
-            <h3>YFinance Market Data Observability Platform</h3>
-            <p>An observability platform that tracks API latency, errors, and traces for the Yahoo Finance API.</p>
-            <div class="tech-stack">
-              <span>OpenTelemetry</span>
-              <span>Prometheus</span>
-              <span>Grafana</span>
-              <span>Docker</span>
-            </div>
-          </div>
-        </a>
-      </div>
+			<div class="current-work">
+				<h2>What I'm building right now:</h2>
+				<div class="project">
+					<a
+						href="https://github.com/shahjacobb/Market-Data-API-Observability-Platform"
+						class="project-link"
+					>
+						<h3>YFinance Market Data Observability Platform</h3>
+						<p>
+							An observability platform that tracks API latency,
+							errors, and traces for the Yahoo Finance API.
+						</p>
+						<div class="tech-stack">
+							<span>OpenTelemetry</span>
+							<span>Prometheus</span>
+							<span>Grafana</span>
+							<span>Docker</span>
+						</div>
+					</a>
+				</div>
+			</div>
 
-      <div class="skills">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Languages</h3>
-            <p>Python, JavaScript, C++, Java</p>
-          </div>
-          <div class="skill-category">
-            <h3>Frameworks/Services</h3>
-            <p>React, NextJS, FastAPI, Flask, AWS Amplify, OpenAI API</p>
-          </div>
-          <div class="skill-category">
-            <h3>Databases</h3>
-            <p>AWS DynamoDB, MySQL</p>
-          </div>
-          <div class="skill-category">
-            <h3>Tools & Platforms</h3>
-            <p>Docker and Docker Compose, AWS S3, Prometheus, OpenTelemetry, Grafana</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+			<div class="skills">
+				<h2>Technical Skills</h2>
+				<div class="skills-grid">
+					<div class="skill-category">
+						<h3>Languages</h3>
+						<p>Python, JavaScript, C++, Java</p>
+					</div>
+					<div class="skill-category">
+						<h3>Frameworks/Services</h3>
+						<p>
+							React, NextJS, FastAPI, Flask, AWS Amplify, OpenAI
+							API
+						</p>
+					</div>
+					<div class="skill-category">
+						<h3>Databases</h3>
+						<p>AWS DynamoDB, MySQL</p>
+					</div>
+					<div class="skill-category">
+						<h3>Tools & Platforms</h3>
+						<p>
+							Docker and Docker Compose, AWS S3, Prometheus,
+							OpenTelemetry, Grafana
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-  <div class="built-with">
-    <p>
-      Built with <a href="https://astro.build">Astro in December 2024</a> and deployed on <a href="https://netlify.com">Netlify!</a>
-    </p>
-  </div>
+	<div class="built-with">
+		<p>
+			Built with <a href="https://astro.build">Astro in December 2024</a> and
+			deployed on <a href="https://netlify.com">Netlify!</a>
+		</p>
+	</div>
 </DarkLayout>
 
 <style>
-  .hero {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-  }
+	.hero {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 4rem 2rem;
+	}
 
-  .profile-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto 3rem;
-  }
+	.profile-image {
+		width: 135px;
+		height: 135px;
+		border-radius: 50%;
+		overflow: hidden;
+		margin: 0 auto 2rem;
+	}
 
-  .profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+	.profile-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 
-  h1 {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-    text-align: center;
-  }
+	h1 {
+		font-size: 4rem;
+		margin-bottom: 1.5rem;
+		font-weight: 600;
+		text-align: center;
+	}
 
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 2.3rem;
-    }
-  }
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 2.3rem;
+		}
+	}
 
-  h2 {
-    display: inline-block;
-    background: rgba(34, 34, 34, 0.8);
-    color: #f7c66f;
-    font-size: 2.3rem;
-    padding: 0.4em 0.8em;
-    margin: 4rem 0 2rem;
-    border-radius: 8px;
-    font-weight: 500;
-  }
+	h2 {
+		display: inline-block;
+		background: rgba(34, 34, 34, 0.8);
+		color: #f7c66f;
+		font-size: 2.3rem;
+		padding: 0.4em 0.8em;
+		margin: 4rem 0 2rem;
+		border-radius: 8px;
+		font-weight: 500;
+	}
 
-  h2:first-of-type {
-    margin-top: 2rem;
-  }
+	h2:first-of-type {
+		margin-top: 2rem;
+	}
 
-  h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    color: #fff;
-  }
+	h3 {
+		font-size: 1.4rem;
+		margin-bottom: 1rem;
+		color: #fff;
+	}
 
-  .content {
-    font-size: 1.15rem;
-    line-height: 1.6;
-  }
+	.content {
+		font-size: 1.15rem;
+		line-height: 1.6;
+	}
 
-  p, .content p {
-    font-size: 1.15rem;
-    line-height: 1.6;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-  }
+	p,
+	.content p {
+		font-size: 1.15rem;
+		line-height: 1.6;
+		color: #ffffff;
+		margin-bottom: 1.5rem;
+	}
 
-  a {
-    color: #f7c66f;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(247, 198, 111, 0.3);
-    transition: all 0.2s ease;
-  }
+	a {
+		color: #f7c66f;
+		text-decoration: none;
+		border-bottom: 1px solid rgba(247, 198, 111, 0.3);
+		transition: all 0.2s ease;
+	}
 
-  a:hover {
-    border-bottom-color: #f7c66f;
-  }
+	a:hover {
+		border-bottom-color: #f7c66f;
+	}
 
-  .project {
-    background: rgba(34, 34, 34, 0.8);
-    padding: 2rem;
-    border-radius: 8px;
-    margin: 1.5rem 0;
-  }
+	.project {
+		background: rgba(34, 34, 34, 0.8);
+		padding: 2rem;
+		border-radius: 8px;
+		margin: 1.5rem 0;
+	}
 
-  .project:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.08);
-  }
+	.project:hover {
+		transform: translateY(-5px);
+		background: rgba(255, 255, 255, 0.08);
+	}
 
-  .tech-stack {
-    margin-top: 1.5rem;
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
+	.tech-stack {
+		margin-top: 1.5rem;
+		display: flex;
+		gap: 0.75rem;
+		flex-wrap: wrap;
+	}
 
-  .tech-stack span {
-    background: rgba(247, 198, 111, 0.1);
-    color: #f7c66f;
-    padding: 0.5em 1em;
-    border-radius: 4px;
-    font-size: 1.1rem;
-  }
+	.tech-stack span {
+		background: rgba(247, 198, 111, 0.1);
+		color: #f7c66f;
+		padding: 0.5em 1em;
+		border-radius: 4px;
+		font-size: 1.1rem;
+	}
 
-  .skills {
-    margin-top: 4rem;
-  }
+	.skills {
+		margin-top: 4rem;
+	}
 
-  .skills h2 {
-    font-size: 2.3rem;
-    margin-bottom: 2rem;
-    color: var(--text);
-  }
+	.skills h2 {
+		font-size: 2.3rem;
+		margin-bottom: 2rem;
+		color: var(--text);
+	}
 
-  .skills-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
+	.skills-grid {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
 
-  .skill-category {
-    margin: 0;
-  }
+	.skill-category {
+		margin: 0;
+	}
 
-  .skill-category h3 {
-    display: inline-block;
-    background: rgba(34, 34, 34, 0.8);
-    color: #f7c66f;
-    font-size: 1.15rem;
-    padding: 0.4em 0.8em;
-    margin-bottom: 0.75rem;
-    border-radius: 6px;
-  }
+	.skill-category h3 {
+		display: inline-block;
+		background: rgba(34, 34, 34, 0.8);
+		color: #f7c66f;
+		font-size: 1.15rem;
+		padding: 0.4em 0.8em;
+		margin-bottom: 0.75rem;
+		border-radius: 6px;
+	}
 
-  .skill-category p {
-    font-size: 1.15rem;
-    line-height: 1.6;
-    margin: 0;
-  }
+	.skill-category p {
+		font-size: 1.15rem;
+		line-height: 1.6;
+		margin: 0;
+	}
 
-  @media (max-width: 768px) {
-    .hero {
-      padding: 2rem 1rem;
-    }
+	@media (max-width: 768px) {
+		.hero {
+			padding: 2rem 1rem;
+		}
 
-    h1 {
-      font-family: "Merriweather", serif;
-      font-weight: Lig;
-      font-size: 2.3rem;
-      font-style: normal;
-    }
+		h1 {
+			font-family: "Merriweather", serif;
+			font-weight: Lig;
+			font-size: 2.3rem;
+			font-style: normal;
+		}
 
-    h2 {
-      font-size: 2rem;
-    }
+		h2 {
+			font-size: 2rem;
+		}
 
-    .content {
-      font-size: 1.1rem;
-    }
+		.content {
+			font-size: 1.1rem;
+		}
 
-    .skills-grid {
-      grid-template-columns: 1fr;
-    }
-  }
+		.skills-grid {
+			grid-template-columns: 1fr;
+		}
+	}
 
-  .project-link {
-    color: inherit;
-    border-bottom: none;
-  }
+	.project-link {
+		color: inherit;
+		border-bottom: none;
+	}
 
-  /* Main content text */
-  p, .content p {
-    font-size: 1.15rem;
-    line-height: 1.6;
-    color: #ffffff;
-  }
+	/* Main content text */
+	p,
+	.content p {
+		font-size: 1.15rem;
+		line-height: 1.6;
+		color: #ffffff;
+	}
 
-  @media (min-width: 768px) {
-    p, .content p {
-      font-size: 1.25rem;
-    }
-  }
+	@media (min-width: 768px) {
+		p,
+		.content p {
+			font-size: 1.25rem;
+		}
+	}
 
-  /* Skills section text */
-  .skill-category p {
-    font-size: 1.15rem;
-    line-height: 1.6;
-  }
+	/* Skills section text */
+	.skill-category p {
+		font-size: 1.15rem;
+		line-height: 1.6;
+	}
 
-  @media (min-width: 768px) {
-    .skill-category p {
-      font-size: 1.25rem;
-    }
-  }
+	@media (min-width: 768px) {
+		.skill-category p {
+			font-size: 1.25rem;
+		}
+	}
 
-  .built-with {
-    text-align: center;
-    padding: 2rem 0 3rem;
-    margin-top: 2rem;
-  }
+	.built-with {
+		text-align: center;
+		padding: 2rem 0 3rem;
+		margin-top: 2rem;
+	}
 
-  .built-with p {
-    font-size: 1.2rem;
-    color: #c2bfbf;
-  }
+	.built-with p {
+		font-size: 1.2rem;
+		color: #c2bfbf;
+	}
 
-  .built-with a {
-    color: #ffffff;
-    border-bottom-color: rgba(170, 170, 170, 0.3);
-  }
+	.built-with a {
+		color: #ffffff;
+		border-bottom-color: rgba(170, 170, 170, 0.3);
+	}
 
-  .built-with a:hover {
-    color: #f7c66f;
-    border-bottom-color: #f7c66f;
-  }
-
+	.built-with a:hover {
+		color: #f7c66f;
+		border-bottom-color: #f7c66f;
+	}
 </style>
