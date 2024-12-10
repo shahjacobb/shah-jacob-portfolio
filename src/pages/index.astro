@@ -59,7 +59,7 @@ import ResumeButton from "../components/ResumeButton.astro";
 					<div class="links">
 						<a
 							href="https://github.com/shahjacobb/Market-Data-API-Observability-Platform"
-							class="project-link"
+							class="view-project-button"
 						>
 							View Project →
 						</a>
@@ -185,15 +185,27 @@ import ResumeButton from "../components/ResumeButton.astro";
 	}
 
 	.project {
-		background: rgba(34, 34, 34, 0.8);
+		background: #1a1a1a;
 		padding: 2rem;
 		border-radius: 8px;
 		margin: 1.5rem 0;
 	}
 
-	.project:hover {
-		transform: translateY(-5px);
-		background: rgba(255, 255, 255, 0.08);
+	.project > a {
+		border: none;
+		text-decoration: none;
+	}
+
+	.project-link {
+		display: inline-block;
+		padding: 1rem 2rem;
+		background-color: #1a1a1a;
+		color: #fff;
+		border: 2px solid #f7c66f;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 1.2rem;
 	}
 
 	.tech-stack {
@@ -272,23 +284,6 @@ import ResumeButton from "../components/ResumeButton.astro";
 		}
 	}
 
-	.project-link {
-		display: inline-block;
-		padding: 1rem 2rem;
-		background-color: #1a1a1a;
-		color: #fff;
-		border: 2px solid #f7c66f;
-		border-radius: 8px;
-		text-decoration: none;
-		font-weight: 500;
-		font-size: 1.2rem;
-		transition: color 0.2s ease;
-	}
-
-	.project-link:hover {
-		color: #f7c66f;
-	}
-
 	.links {
 		margin-top: 2rem;
 		display: flex;
@@ -341,5 +336,31 @@ import ResumeButton from "../components/ResumeButton.astro";
 	.built-with a:hover {
 		color: #f7c66f;
 		border-bottom-color: #f7c66f;
+	}
+
+	.links .project-link {
+		display: inline-block;
+		padding: 1rem 2rem;
+		background-color: #1a1a1a;
+		color: #fff;
+		border: 2px solid #f7c66f;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 1.2rem;
+		box-shadow: 0 4px 15px rgba(247, 198, 111, 0.3);
+	}
+
+	.view-project-button {
+		display: inline-block;
+		padding: 1rem 2rem;
+		background-color: #1a1a1a;
+		color: #fff;
+		border: 2px solid #f7c66f;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 1.2rem;
+		box-shadow: 0 4px 15px rgba(247, 198, 111, 0.3);
 	}
 </style>
