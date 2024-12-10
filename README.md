@@ -4,19 +4,11 @@
 
 ## todo
 
-- [x] update portfolio page styling
-- [x] update link to project in index.astro in right 
-- [ ] fix contact page routing issues
-- [ ] adjust tool/tech tag sizes on homepage
-- [x] remove about page and update navigation
-- [ ] create resume page
-- [ ] update bio and add hyperlink to 'pages/projects'
-- [ ] list project directory structure
+- [x] update portfolio page styling and accessibility
+- [x] update link to project in index.astro
+- [x] fix contact page routing and styling
+- [x] adjust tool/tech tag sizes
+- [x] streamline navigation (removed about page)
+- [x] update bio and add projects
 - [x] deploy with [netlify](https://docs.astro.build/en/guides/deploy/netlify/)
-
-## built with
-
-- [astro](https://astro.build)
-- geist font
-
-## Project Structure (if you're wondering)
+- [ ] improve accessibility of project div cards
