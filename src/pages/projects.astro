@@ -111,8 +111,9 @@ import DarkLayout from "../layouts/DarkLayout.astro";
   }
 
   .description {
-    color: #888;
+    font-size: 1.15rem;
     line-height: 1.6;
+    color: #ffffff;
     margin-bottom: 1.5rem;
   }
 
@@ -132,18 +133,27 @@ import DarkLayout from "../layouts/DarkLayout.astro";
   }
 
   .links {
+    margin-top: 2rem;
     display: flex;
-    gap: 1rem;
+    justify-content: flex-end;
   }
 
   .project-link {
-    color: #ffffff;
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 2px solid #f7c66f;
+    border-radius: 8px;
     text-decoration: none;
-    transition: color 0.2s ease;
+    font-weight: 500;
+    font-size: 1.2rem;
+    transition: all 0.2s ease;
   }
 
   .project-link:hover {
     color: #f7c66f;
+    box-shadow: 0 4px 15px rgba(247, 198, 111, 0.3);
   }
 
   .project-images {
