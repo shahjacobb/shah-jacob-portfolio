@@ -43,6 +43,15 @@ import DarkLayout from "../layouts/DarkLayout.astro";
         <p class="description">
           Built in under 15 hours at the MongoDB GenAI Hackathon in April 2024.
         </p>
+        <div class="project-images">
+          <div>
+            <img src="/images/mango10k-mvp-demo.jpeg" alt="Demo of MVP/interface" />
+          </div>
+          <div>
+            <img src="/images/mongodb-hack-presentation.jpeg" alt="Presenting at the hack" />
+            <p class="image-caption">Me presenting at the MongoDB GenAI Hackathon</p>
+          </div>
+        </div>
         <div class="tech-stack">
           <span>MongoDB Atlas</span>
           <span>OpenAI</span>
@@ -108,18 +117,18 @@ import DarkLayout from "../layouts/DarkLayout.astro";
   }
 
   .tech-stack {
+    margin-top: 1.5rem;
     display: flex;
+    gap: 0.75rem;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
   }
 
   .tech-stack span {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+    background: rgba(34, 34, 34, 0.8);
+    color: #f7c66f;
+    padding: 0.4em 0.8em;
+    border-radius: 8px;
     font-size: 0.9rem;
-    color: #fff;
   }
 
   .links {
@@ -128,13 +137,26 @@ import DarkLayout from "../layouts/DarkLayout.astro";
   }
 
   .project-link {
-    color: #888;
+    color: #ffffff;
     text-decoration: none;
     transition: color 0.2s ease;
   }
 
   .project-link:hover {
-    color: #fff;
+    color: #f7c66f;
+  }
+
+  .project-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .project-images img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
   }
 
   @media (max-width: 768px) {
@@ -145,6 +167,17 @@ import DarkLayout from "../layouts/DarkLayout.astro";
     .project {
       padding: 1.5rem;
     }
+
+    .project-images {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .image-caption {
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    text-align: center;
   }
 </style>
 
