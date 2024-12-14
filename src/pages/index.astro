@@ -3,7 +3,7 @@ import DarkLayout from "../layouts/DarkLayout.astro";
 import ResumeButton from "../components/ResumeButton.astro";
 ---
 
-<DarkLayout>
+<DarkLayout isHome={true}>
 	<section class="hero">
 		<div class="profile-image">
 			<img src="/images/headshot_oct_24.jpg" alt="Shah Jacob" />
@@ -107,14 +107,14 @@ import ResumeButton from "../components/ResumeButton.astro";
 
 <style>
 	.hero {
-		max-width: 1000px;
+		max-width: 800px;
 		margin: 0 auto;
 		padding: 4rem 2rem;
 	}
 
 	.profile-image {
-		width: 135px;
-		height: 135px;
+		width: 145px;
+		height: 145px;
 		border-radius: 50%;
 		overflow: hidden;
 		margin: 0 auto 2rem;
@@ -127,7 +127,7 @@ import ResumeButton from "../components/ResumeButton.astro";
 	}
 
 	h1 {
-		font-size: 4rem;
+		font-size: 3rem;
 		margin-bottom: 1.5rem;
 		font-weight: 600;
 		text-align: center;
@@ -155,13 +155,13 @@ import ResumeButton from "../components/ResumeButton.astro";
 	}
 
 	h3 {
-		font-size: 1.4rem;
+		font-size: 1.3rem;
 		margin-bottom: 1rem;
 		color: #fff;
 	}
 
 	.content {
-		font-size: 1.15rem;
+		font-size: 1.0rem;
 		line-height: 1.6;
 	}
 
@@ -189,6 +189,7 @@ import ResumeButton from "../components/ResumeButton.astro";
 		padding: 2rem;
 		border-radius: 8px;
 		margin: 1.5rem 0;
+		overflow: hidden;
 	}
 
 	.project > a {
@@ -220,7 +221,7 @@ import ResumeButton from "../components/ResumeButton.astro";
 		color: #f7c66f;
 		padding: 0.5em 1em;
 		border-radius: 4px;
-		font-size: 1.1rem;
+		font-size: 0.9rem;
 	}
 
 	.skills {

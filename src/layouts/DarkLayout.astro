@@ -4,11 +4,13 @@ import { ViewTransitions } from 'astro:transitions';
 interface Props {
   title?: string;
   description?: string;
+  isHome?: boolean;
 }
 
 const { 
   title = "Shah Jacob - Software Engineering Intern",
-  description = "CS student at Queens College, interested in backend/infra and distributed systems with experience in full-stack engineering."
+  description = "CS student at Queens College, interested in backend/infra and distributed systems with experience in full-stack engineering.",
+  isHome = false
 } = Astro.props;
 ---
 
@@ -28,7 +30,9 @@ const {
   <body>
     <nav>
       <div class="logo">
-        <a href="/">SJ</a>
+        <a href="/" transition:animate="slide">
+          {isHome ? "SJ" : "←"}
+        </a>
       </div>
       <div class="nav-links">
         <a href="/projects">Projects</a>
@@ -133,8 +137,8 @@ const {
   }
 
   main {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 2rem 4rem;
+    padding: 0 2rem;
   }
 </style> 

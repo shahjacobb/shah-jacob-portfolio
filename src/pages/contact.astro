@@ -22,18 +22,21 @@ import DarkLayout from '../layouts/DarkLayout.astro';
   h1 {
     font-size: 3.5rem;
     margin-bottom: 3rem;
-    text-align: center;
+    text-align: left;
     color: #ffffff;
   }
 
   .contact-container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 4rem 2rem;
+    padding: 2rem;
   }
 
   .contact-item {
-    margin: 3rem 0;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   .label {
@@ -41,13 +44,30 @@ import DarkLayout from '../layouts/DarkLayout.astro';
     font-size: 1.8rem;
     color: #f7c66f;
     display: block;
-    margin-bottom: 1rem;
   }
 
   .detail {
     font-family: "Geist", sans-serif;
     font-size: 1.6rem;
     color: #ffffff;
-    margin-top: 0.5rem;
   }
-</style> 
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-container {
+      padding: 1.5rem;
+    }
+
+    .label {
+      font-size: 1.4rem;
+    }
+
+    .detail {
+      font-size: 1.2rem;
+    }
+  }
+</style>
