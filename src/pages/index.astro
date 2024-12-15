@@ -8,7 +8,12 @@ import ResumeButton from "../components/ResumeButton.astro";
 		<div class="profile-image">
 			<img src="/images/headshot_oct_24.jpg" alt="Shah Jacob" />
 		</div>
-		<h1>Shah Jacob</h1>
+		<div class="name-section">
+			<h1>Shah Jacob</h1>
+			<a href="https://www.linkedin.com/in/shah-jacob" class="linkedin-link" aria-label="LinkedIn Profile">
+				<img src="/images/LI-In-Bug.png" alt="LinkedIn" />
+			</a>
+		</div>
 		<div class="content">
 			<p class="intro">
 				Hi! I'm a computer science student at Queens College, graduating
@@ -363,5 +368,29 @@ import ResumeButton from "../components/ResumeButton.astro";
 		font-weight: 500;
 		font-size: 1.2rem;
 		box-shadow: 0 4px 15px rgba(247, 198, 111, 0.3);
+	}
+
+	.name-section {
+		display: flex;
+		align-items: baseline;
+		justify-content: center;
+		gap: 0.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.name-section h1 {
+		margin-bottom: 0;
+	}
+
+	.linkedin-link {
+		border: 2px solid #f7c66f;
+		box-shadow: 0 4px 15px rgba(247, 198, 111, 0.3);
+		border-radius: 4px;
+	}
+
+	.linkedin-link img {
+		width: 24px;
+		height: 24px;
+		filter: brightness(0) invert(1);
 	}
 </style>
