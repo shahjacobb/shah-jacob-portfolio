@@ -69,6 +69,29 @@ import ResumeButton from "../components/ResumeButton.astro";
 						</a>
 					</div>
 				</div>
+				<div class="project">
+					<a href="https://github.com/CharlesYuan02/Mango10K" class="project-link">
+						<h3>AI Equity Research Assistant</h3>
+						<p>
+							An AI-powered chatbot using RAG (Retrieval Augmented Generation) to help investors analyze SEC filings through natural language conversations. Built with vector search to intelligently process 10-K/10-Q reports, making financial research more accessible and intuitive.
+						</p>
+						<p>
+							Built in under 15 hours at the MongoDB GenAI Hackathon in April 2024.
+						</p>
+						<div class="tech-stack">
+							<span>MongoDB Atlas</span>
+							<span>OpenAI</span>
+							<span>LangChain</span>
+							<span>Nomic</span>
+							<span>Gradio</span>
+						</div>
+					</a>
+					<div class="links">
+						<a href="https://github.com/CharlesYuan02/Mango10K" class="view-project-button">
+							View Project →
+						</a>
+					</div>
+				</div>
 			</div>
 
 			<div class="skills">
@@ -235,33 +258,42 @@ import ResumeButton from "../components/ResumeButton.astro";
 	.skills h2 {
 		font-size: 2.3rem;
 		margin-bottom: 2rem;
-		color: var(--text);
+		color: #f7c66f;
+		font-weight: 600;
 	}
 
 	.skills-grid {
 		display: flex;
 		flex-direction: column;
 		gap: 1.5rem;
+		background: #1a1a1a;
+		padding: 2rem;
+		border-radius: 8px;
 	}
 
 	.skill-category {
+		background: #0a0a0a;
+		padding: 1.5rem;
+		border-radius: 6px;
 		margin: 0;
 	}
 
 	.skill-category h3 {
 		display: inline-block;
-		background: rgba(34, 34, 34, 0.8);
 		color: #f7c66f;
-		font-size: 1.15rem;
-		padding: 0.4em 0.8em;
+		font-size: 1.3rem;
+		font-weight: 600;
 		margin-bottom: 0.75rem;
-		border-radius: 6px;
+		letter-spacing: 0.2px;
 	}
 
 	.skill-category p {
-		font-size: 1.15rem;
+		font-size: 1rem;
 		line-height: 1.6;
 		margin: 0;
+		color: #fff;
+		font-weight: 300;
+		letter-spacing: 0.2px;
 	}
 
 	@media (max-width: 768px) {
@@ -271,7 +303,7 @@ import ResumeButton from "../components/ResumeButton.astro";
 
 		h1 {
 			font-family: "Merriweather", serif;
-			font-weight: Lig;
+			font-weight: Light;
 			font-size: 2.3rem;
 			font-style: normal;
 		}
@@ -286,6 +318,19 @@ import ResumeButton from "../components/ResumeButton.astro";
 
 		.skills-grid {
 			grid-template-columns: 1fr;
+			padding: 1.5rem;
+		}
+
+		.skill-category {
+			padding: 1.2rem;
+		}
+
+		.skill-category h3 {
+			font-size: 1.2rem;
+		}
+
+		.skill-category p {
+			font-size: 1.1rem;
 		}
 	}
 
@@ -312,13 +357,13 @@ import ResumeButton from "../components/ResumeButton.astro";
 
 	/* Skills section text */
 	.skill-category p {
-		font-size: 1.15rem;
+		font-size: 1rem;
 		line-height: 1.6;
 	}
 
 	@media (min-width: 768px) {
 		.skill-category p {
-			font-size: 1.25rem;
+			font-size: 1.1rem;
 		}
 	}
 

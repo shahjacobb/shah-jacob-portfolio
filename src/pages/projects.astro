@@ -30,6 +30,39 @@ import DarkLayout from "../layouts/DarkLayout.astro";
 				</a>
 			</div>
 		</div>
+
+		<div class="project-card">
+			<h2>AI Equity Research Assistant</h2>
+			<p class="description">
+				An AI-powered chatbot using RAG (Retrieval Augmented Generation) to help investors analyze SEC filings through natural language conversations. Built with vector search to intelligently process 10-K/10-Q reports, making financial research more accessible and intuitive.
+			</p>
+			<p class="description">
+				Built in under 15 hours at the MongoDB GenAI Hackathon in April 2024.
+			</p>
+
+			<div class="metrics-example">
+				<p class="metrics-caption">Demo of the AI Equity Research Assistant analyzing SEC filings</p>
+				<img src="/images/mango10k-mvp-demo.jpeg" alt="Demo of the AI Research Assistant" class="metrics-image" />
+			</div>
+
+			<div class="metrics-example">
+				<p class="metrics-caption">Me presenting at the MongoDB Gen AI Hackathon</p>
+				<img src="/images/mongodb-hack-presentation.jpeg" alt="Presenting at MongoDB Hackathon" class="metrics-image" />
+			</div>
+
+			<div class="tech-stack">
+				<span>MongoDB Atlas</span>
+				<span>OpenAI</span>
+				<span>LangChain</span>
+				<span>Nomic</span>
+				<span>Gradio</span>
+			</div>
+			<div class="links">
+				<a href="https://github.com/CharlesYuan02/Mango10K" class="project-link">
+					View on GitHub →
+				</a>
+			</div>
+		</div>
 	</section>
 </DarkLayout>
 
@@ -70,11 +103,12 @@ import DarkLayout from "../layouts/DarkLayout.astro";
 	}
 
 	.metrics-caption, .code-reference {
-		color: #666;
+		color: #fff;
 		font-size: 0.95rem;
 		font-weight: 200;
 		font-family: "Geist", sans-serif;
 		letter-spacing: 0.2px;
+		opacity: 0.8;
 	}
 
 	.metrics-caption {
