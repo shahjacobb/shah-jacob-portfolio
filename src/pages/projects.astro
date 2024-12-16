@@ -2,191 +2,122 @@
 import DarkLayout from "../layouts/DarkLayout.astro";
 ---
 
-<DarkLayout title="Portfolio - Shah Jacob">
-  <section class="portfolio">
-    <h1>Portfolio Projects</h1>
+<DarkLayout>
+	<section class="projects">
+		<h1>Projects</h1>
+		<div class="project-card">
+			<h2>YFinance Market Data Observability Platform</h2>
+			<p class="description">
+				An observability platform for the YFinance API that collects performance metrics, request patterns, and error rates. Uses Prometheus and Grafana for real-time monitoring and visualization.
+			</p>
+			
+			<div class="metrics-example">
+				<p class="metrics-caption">Prometheus metrics tracking API request counts, latency, and error rates per endpoint</p>
+				<img src="/images/outputs_and_work/metric_endpoint_responses.png" alt="Metrics endpoint showing request counts" class="metrics-image" />
+				<p class="code-reference">Implemented using prometheus_client with custom middleware to track request patterns and YFinance API performance</p>
+			</div>
 
-    <div class="projects">
-      <article class="project">
-        <h2>YFinance Market Data Observability Platform</h2>
-        <p class="description">
-          An observability platform that tracks API latency, errors, and traces
-          for the Yahoo Finance API. Built with OpenTelemetry, Prometheus, and
-          Grafana, running in Docker containers.
-        </p>
-        <div class="tech-stack">
-          <span>OpenTelemetry</span>
-          <span>Prometheus</span>
-          <span>Grafana</span>
-          <span>Docker</span>
-          <span>Python</span>
-        </div>
-        <div class="links">
-          <a
-            href="https://github.com/shahjacobb/Market-Data-API-Observability-Platform"
-            class="project-link"
-          >
-            View Project →
-          </a>
-        </div>
-      </article>
+			<div class="tech-stack">
+				<span>Prometheus</span>
+				<span>Grafana</span>
+				<span>Docker</span>
+				<span>FastAPI</span>
+			</div>
 
-      <article class="project">
-        <h2>AI Equity Research Assistant</h2>
-        <p class="description">
-          An AI-powered chatbot using RAG (Retrieval Augmented Generation) to
-          help investors analyze SEC filings through natural language
-          conversations. Built with vector search to intelligently process
-          10-K/10-Q reports, making financial research more accessible and
-          intuitive.
-        </p>
-        <p class="description">
-          Built in under 15 hours at the MongoDB GenAI Hackathon in April 2024.
-        </p>
-        <div class="project-images">
-          <div>
-            <img src="/images/mango10k-mvp-demo.jpeg" alt="Demo of MVP/interface" />
-          </div>
-          <div>
-            <img src="/images/mongodb-hack-presentation.jpeg" alt="Presenting at the hack" />
-            <p class="image-caption">Me presenting at the MongoDB GenAI Hackathon</p>
-          </div>
-        </div>
-        <div class="tech-stack">
-          <span>MongoDB Atlas</span>
-          <span>OpenAI</span>
-          <span>LangChain</span>
-          <span>Nomic</span>
-          <span>Gradio</span>
-        </div>
-        <div class="links">
-          <a
-            href="https://github.com/CharlesYuan02/Mango10K"
-            class="project-link"
-          >
-            View Project →
-          </a>
-        </div>
-      </article>
-    </div>
-  </section>
+			<div class="links">
+				<a href="https://github.com/shahjacobb/Market-Data-API-Observability-Platform" class="project-link">
+					View on GitHub →
+				</a>
+			</div>
+		</div>
+	</section>
 </DarkLayout>
 
 <style>
-  .portfolio {
-    padding: 2rem 0;
-  }
+	.projects {
+		padding: 4rem 2rem;
+	}
 
-  h1 {
-    font-size: 3.5rem;
-    margin-bottom: 3rem;
-    background: linear-gradient(to right, #fff, #888);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+	h1 {
+		font-size: 3rem;
+		margin-bottom: 2rem;
+	}
 
-  .projects {
-    display: grid;
-    gap: 2rem;
-  }
+	.project-card {
+		background: #1a1a1a;
+		padding: 2rem;
+		border-radius: 8px;
+		margin: 2rem 0;
+	}
 
-  .project {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    padding: 2rem;
-    transition:
-      transform 0.2s ease,
-      background 0.2s ease;
-  }
+	h2 {
+		font-size: 2rem;
+		color: #f7c66f;
+		margin-bottom: 1rem;
+	}
 
-  .project:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.08);
-  }
+	.description {
+		font-size: 1.15rem;
+		line-height: 1.6;
+		margin-bottom: 2rem;
+	}
 
-  h2 {
-    font-size: 1.5rem;
-    margin: 0 0 1rem 0;
-    color: #fff;
-  }
+	.metrics-example {
+		background: #0a0a0a;
+		padding: 1.5rem;
+		border-radius: 6px;
+		margin: 2rem 0;
+	}
 
-  .description {
-    font-size: 1.15rem;
-    line-height: 1.6;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-  }
+	.metrics-caption, .code-reference {
+		color: #666;
+		font-size: 0.95rem;
+		font-weight: 200;
+		font-family: "Geist", sans-serif;
+		letter-spacing: 0.2px;
+	}
 
-  .tech-stack {
-    margin-top: 1.5rem;
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
+	.metrics-caption {
+		margin-bottom: 1rem;
+	}
 
-  .tech-stack span {
-    background: rgba(34, 34, 34, 0.8);
-    color: #f7c66f;
-    padding: 0.4em 0.8em;
-    border-radius: 8px;
-    font-size: 0.9rem;
-  }
+	.code-reference {
+		margin-top: 1rem;
+		font-size: 0.9rem;
+	}
 
-  .links {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: flex-end;
-  }
+	.metrics-image {
+		width: 100%;
+		border-radius: 4px;
+		border: 1px solid rgba(247, 198, 111, 0.2);
+	}
 
-  .project-link {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: #1a1a1a;
-    color: #fff;
-    border: 2px solid #f7c66f;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.2rem;
-    transition: color 0.2s ease;
-  }
+	.tech-stack {
+		display: flex;
+		gap: 0.75rem;
+		flex-wrap: wrap;
+		margin: 2rem 0;
+	}
 
-  .project-link:hover {
-    color: #f7c66f;
-  }
+	.tech-stack span {
+		background: rgba(247, 198, 111, 0.1);
+		color: #f7c66f;
+		padding: 0.5em 1em;
+		border-radius: 4px;
+		font-size: 0.9rem;
+	}
 
-  .project-images {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin: 1.5rem 0;
-  }
-
-  .project-images img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 8px;
-  }
-
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 2.5rem;
-    }
-
-    .project {
-      padding: 1.5rem;
-    }
-
-    .project-images {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  .image-caption {
-    color: #888;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-    text-align: center;
-  }
+	.project-link {
+		display: inline-block;
+		padding: 1rem 2rem;
+		background-color: #1a1a1a;
+		color: #fff;
+		border: 2px solid #f7c66f;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 1.2rem;
+		box-shadow: 0 4px 15px rgba(247, 198, 111, 0.3);
+	}
 </style>
 
