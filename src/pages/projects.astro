@@ -8,13 +8,32 @@ import DarkLayout from "../layouts/DarkLayout.astro";
 		<div class="project-card">
 			<h2>YFinance Market Data Observability Platform</h2>
 			<p class="description">
-				An observability platform for the YFinance API that collects performance metrics, request patterns, and error rates. Uses Prometheus and Grafana for real-time monitoring and visualization.
+				An observability platform that instruments the YFinance stock market data API, collecting performance metrics, request patterns, and error rates. Uses Prometheus queries and Grafana for real-time monitoring and visualization, with every service running as a Docker container.
 			</p>
 			
 			<div class="metrics-example">
-				<p class="metrics-caption">Prometheus metrics tracking API request counts, latency, and error rates per endpoint</p>
-				<img src="/images/outputs_and_work/metric_endpoint_responses.png" alt="Metrics endpoint showing request counts" class="metrics-image" />
-				<p class="code-reference">Implemented using prometheus_client with custom middleware to track request patterns and YFinance API performance</p>
+				<p class="metrics-caption">API endpoint responses showing price data for AAPL, MSFT, and historical data for GOOGL</p>
+				<img src="/images/outputs_and_work/metric_endpoint_responses.png" alt="API endpoint responses" class="metrics-image" />
+				<p class="code-reference">Implemented using FastAPI with YFinance integration for real-time market data</p>
+				<p class="metrics-description">
+					Testing multiple endpoints simultaneously: fetching current stock prices for Apple and Microsoft, along with historical data for Google. The JSON responses show clean, formatted data ready for client consumption.
+				</p>
+			</div>
+
+			<div class="metrics-example">
+				<p class="metrics-caption">Total requests by endpoint</p>
+				<img src="/images/outputs_and_work/market_request_data_prom.png" alt="Market data requests visualization" class="metrics-image" />
+				<p class="metrics-description">
+					Running this query in Prometheus shows the distribution of API traffic - you can see the mix of price lookups, historical data pulls, and info requests over time.
+				</p>
+			</div>
+
+			<div class="metrics-example">
+				<p class="metrics-caption">Requests per symbol</p>
+				<img src="/images/outputs_and_work/ticker_requests_counter_prom.png" alt="Symbol requests visualization" class="metrics-image" />
+				<p class="metrics-description">
+					This query shows how many times each stock symbol (AAPL, GOOGL, MSFT) was requested, tracking the frequency of symbol lookups in our test requests.
+				</p>
 			</div>
 
 			<div class="tech-stack">
@@ -152,6 +171,17 @@ import DarkLayout from "../layouts/DarkLayout.astro";
 		font-weight: 500;
 		font-size: 1.2rem;
 		box-shadow: 0 4px 15px rgba(247, 198, 111, 0.3);
+	}
+
+	.metrics-description {
+		color: #fff;
+		font-size: 0.95rem;
+		font-weight: 200;
+		font-family: "Geist", sans-serif;
+		letter-spacing: 0.2px;
+		opacity: 0.8;
+		margin-top: 1rem;
+		line-height: 1.5;
 	}
 </style>
 
