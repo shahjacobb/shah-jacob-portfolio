@@ -16,25 +16,19 @@ import ResumeButton from "../components/ResumeButton.astro";
 		</div>
 		<div class="content">
 			<p class="intro">
-					Hi! I'm a computer science student at Queens College, graduating
-				in 2025, now seeking my first software engineering role.
+				Hi! I'm a computer science student at Queens College, graduating
+				in May 2025, now seeking roles in <a class="keyword">sales development</a> or <a class="keyword">product</a>.
 			</p>
 
 			<p class="experience">
-				I most recently interned at <a href="https://www.pharmesol.com/"
-					>Pharmesol AI</a
-				>, helping out build out their backend APIs using <a
-					href="https://fastapi.tiangolo.com/">FastAPI</a
-				> and integrating LLM Voice Agents using <a
-					href="https://retell.ai">Retell AI</a
-				>. I also was responsible for creating dashboards in React using <a
-					href="https://tremor.so/">TremorJS</a
-				>
+				I most recently interned at <a href="https://www.pharmesol.com/">Pharmesol AI</a>, 
+				helping out build out their backend APIs using <a href="https://fastapi.tiangolo.com/">FastAPI</a> 
+				and integrating LLM Voice Agents using <a href="https://retell.ai">Retell AI</a>. 
+				I also was responsible for creating dashboards in React using <a href="https://tremor.so/">TremorJS</a>.
 			</p>
 
 			<p class="interests">
-				I'm now most interested in backend engineering, with a focus on
-				observability, containerization, and distributed systems.
+				I'm pursuing sales roles across <a class="keyword">data engineering</a>, <a class="keyword">developer tooling</a>, and <a class="keyword">large language models</a> where I can leverage my engineering background to solve customer problems.
 			</p>
 
 			<ResumeButton
@@ -42,37 +36,43 @@ import ResumeButton from "../components/ResumeButton.astro";
 				buttonText="View My Resume"
 			/>
 
-			<div class="current-work">
-				<h2>What I'm building right now:</h2>
-				<div class="project">
-					<a
-						href="https://github.com/shahjacobb/Market-Data-API-Observability-Platform"
-						class="project-link"
-					>
-						<h3>YFinance Market Data Observability Platform</h3>
-						<p>
-							An observability platform for the YFinance API that collects performance metrics, request patterns, and error rates. Uses Prometheus and Grafana for real-time monitoring and visualization. Currently tracks endpoint hits, latency, and error rates through /metrics endpoint.
-						</p>
-						<div class="tech-stack">
-							<span>Prometheus</span>
-							<span>Grafana</span>
-							<span>Docker</span>
-							<span>FastAPI</span>
-						</div>
+			<div class="section-header">
+				<h2>What I've built:</h2>
+			</div>
+
+			<div class="project-card">
+				<h2>YFinance Market Data Observability Platform</h2>
+				<p class="description">
+					A real-time observability platform that monitors and analyzes requests to the YFinance API - built with FastAPI and Prometheus, and deployed with Docker compose for ease of deployment and scalability.
+				</p>
+				
+				<div class="metrics-example">
+					<p class="metrics-caption">Requests per symbol</p>
+					<img src="/images/outputs_and_work/ticker_requests_counter_prom.png" alt="Symbol requests visualization" class="metrics-image" />
+					<p class="metrics-description">
+						This query shows how many times each stock symbol (AAPL, GOOGL, MSFT) was requested, tracking the frequency of symbol lookups in our test requests.
+					</p>
+				</div>
+
+				<div class="tech-stack">
+					<span>Prometheus</span>
+					<span>Grafana</span>
+					<span>Docker</span>
+					<span>FastAPI</span>
+				</div>
+
+				<div class="links">
+					<a href="https://github.com/shahjacobb/Market-Data-API-Observability-Platform" class="project-link">
+						View Project →
 					</a>
-					<div class="links">
-						<a
-							href="https://github.com/shahjacobb/Market-Data-API-Observability-Platform"
-							class="view-project-button"
-						>
-							View Project →
-						</a>
-					</div>
 				</div>
 			</div>
 
-			<div class="skills">
+			<div class="section-header">
 				<h2>Technical Skills</h2>
+			</div>
+
+			<div class="project-card">
 				<div class="skills-grid">
 					<div class="skill-category">
 						<h3>Languages</h3>
@@ -100,105 +100,138 @@ import ResumeButton from "../components/ResumeButton.astro";
 			</div>
 		</div>
 	</section>
-
-	<div class="built-with">
-		<p>
-			Built with <a href="https://astro.build">Astro in December 2024</a> and
-			deployed on <a href="https://netlify.com">Netlify!</a>
-		</p>
-	</div>
 </DarkLayout>
 
 <style>
 	.hero {
-		max-width: 800px;
-		margin: 0 auto;
-		padding: 4rem 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 2rem 0;
 	}
 
 	.profile-image {
-		width: 145px;
-		height: 145px;
-		border-radius: 50%;
-		overflow: hidden;
-		margin: 0 auto 2rem;
+		width: 200px;
+		height: 200px;
+		margin-bottom: 2rem;
 	}
 
 	.profile-image img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		border-radius: 50%;
+	}
+
+	.name-section {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 2rem;
 	}
 
 	h1 {
 		font-size: 3rem;
-		margin-bottom: 1.5rem;
-		font-weight: 600;
-		text-align: center;
+		margin: 0;
 	}
 
-	@media (max-width: 768px) {
-		h1 {
-			font-size: 2.3rem;
-		}
-	}
-
-	h2 {
-		display: inline-block;
-		background: rgba(34, 34, 34, 0.8);
-		color: #f7c66f;
-		font-size: 2.3rem;
-		padding: 0.4em 0.8em;
-		margin: 4rem 0 2rem;
-		border-radius: 8px;
-		font-weight: 500;
-	}
-
-	h2:first-of-type {
-		margin-top: 2rem;
-	}
-
-	h3 {
-		font-size: 1.3rem;
-		margin-bottom: 1rem;
-		color: #fff;
+	.linkedin-link img {
+		width: 30px;
+		height: 30px;
 	}
 
 	.content {
-		font-size: 1.0rem;
-		line-height: 1.6;
+		max-width: 800px;
+		margin: 0 auto;
 	}
 
-	p,
-	.content p {
-		font-size: 1.15rem;
+	.intro, .experience, .interests {
+		font-size: 1.2rem;
 		line-height: 1.6;
-		color: #ffffff;
 		margin-bottom: 1.5rem;
 	}
 
-	a {
+	.content a {
 		color: #f7c66f;
 		text-decoration: none;
-		border-bottom: 1px solid rgba(247, 198, 111, 0.3);
-		transition: all 0.2s ease;
 	}
 
-	a:hover {
-		border-bottom-color: #f7c66f;
+	.content a:hover {
+		text-decoration: underline;
 	}
 
-	.project {
+	.skills-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.skill-category h3 {
+		color: #f7c66f;
+		margin-bottom: 0.5rem;
+	}
+
+	.current-work h2 {
+		font-size: 2rem;
+		color: #ffffff;
+	}
+
+	.project-card {
 		background: #1a1a1a;
 		padding: 2rem;
 		border-radius: 8px;
-		margin: 1.5rem 0;
-		overflow: hidden;
+		margin: 2rem 0;
 	}
 
-	.project > a {
-		border: none;
-		text-decoration: none;
+	.project-card h2 {
+		font-size: 1.8rem;
+		color: #ffffff;
+		margin-bottom: 1rem;
+		font-weight: 500;
+	}
+
+	.description {
+		font-size: 1.15rem;
+		line-height: 1.6;
+		margin-bottom: 2rem;
+	}
+
+	.metrics-example {
+		background: #0a0a0a;
+		padding: 1.5rem;
+		border-radius: 6px;
+		margin: 2rem 0;
+	}
+
+	.metrics-caption, .code-reference {
+		color: #fff;
+		font-size: 0.95rem;
+		font-weight: 200;
+		font-family: "Geist", sans-serif;
+		letter-spacing: 0.2px;
+		opacity: 0.8;
+	}
+
+	.metrics-caption {
+		margin-bottom: 1rem;
+	}
+
+	.metrics-image {
+		width: 100%;
+		border-radius: 4px;
+		border: 1px solid rgba(247, 198, 111, 0.2);
+	}
+
+	.metrics-description {
+		color: #fff;
+		font-size: 0.95rem;
+		font-weight: 200;
+		font-family: "Geist", sans-serif;
+		letter-spacing: 0.2px;
+		opacity: 0.8;
+		margin-top: 1rem;
+		line-height: 1.5;
 	}
 
 	.project-link {
@@ -211,13 +244,14 @@ import ResumeButton from "../components/ResumeButton.astro";
 		text-decoration: none;
 		font-weight: 500;
 		font-size: 1.2rem;
+		box-shadow: 0 4px 15px rgba(247, 198, 111, 0.3);
 	}
 
 	.tech-stack {
-		margin-top: 1.5rem;
 		display: flex;
 		gap: 0.75rem;
 		flex-wrap: wrap;
+		margin: 1.5rem 0;
 	}
 
 	.tech-stack span {
@@ -228,190 +262,66 @@ import ResumeButton from "../components/ResumeButton.astro";
 		font-size: 0.9rem;
 	}
 
-	.skills {
-		margin-top: 4rem;
-	}
-
-	.skills h2 {
-		font-size: 2.3rem;
-		margin-bottom: 2rem;
-		color: #f7c66f;
-		font-weight: 600;
-	}
-
-	.skills-grid {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-		background: #1a1a1a;
-		padding: 2rem;
-		border-radius: 8px;
-	}
-
-	.skill-category {
-		background: #0a0a0a;
-		padding: 1.5rem;
-		border-radius: 6px;
-		margin: 0;
-	}
-
-	.skill-category h3 {
+	.view-project-button {
 		display: inline-block;
-		color: #f7c66f;
-		font-size: 1.3rem;
-		font-weight: 600;
-		margin-bottom: 0.75rem;
-		letter-spacing: 0.2px;
+		padding: 0.8rem 1.5rem;
+		color: #fff;
+		text-decoration: none;
+		font-size: 1.1rem;
+		transition: color 0.2s;
 	}
 
-	.skill-category p {
-		font-size: 1rem;
-		line-height: 1.6;
-		margin: 0;
-		color: #fff;
-		font-weight: 300;
-		letter-spacing: 0.2px;
+	.view-project-button:hover {
+		color: #f7c66f;
 	}
 
 	@media (max-width: 768px) {
-		.hero {
-			padding: 2rem 1rem;
+		.profile-image {
+			width: 150px;
+			height: 150px;
 		}
 
 		h1 {
-			font-family: "Merriweather", serif;
-			font-weight: Light;
-			font-size: 2.3rem;
-			font-style: normal;
-		}
-
-		h2 {
 			font-size: 2rem;
 		}
 
-		.content {
-			font-size: 1.1rem;
-		}
-
-		.skills-grid {
-			grid-template-columns: 1fr;
-			padding: 1.5rem;
-		}
-
-		.skill-category {
-			padding: 1.2rem;
-		}
-
-		.skill-category h3 {
-			font-size: 1.2rem;
-		}
-
-		.skill-category p {
+		.intro, .experience, .interests {
 			font-size: 1.1rem;
 		}
 	}
 
-	.links {
-		margin-top: 2rem;
-		display: flex;
-		justify-content: flex-end;
-	}
-
-	/* Main content text */
-	p,
-	.content p {
-		font-size: 1.15rem;
-		line-height: 1.6;
-		color: #ffffff;
-	}
-
-	@media (min-width: 768px) {
-		p,
-		.content p {
-			font-size: 1.25rem;
-		}
-	}
-
-	/* Skills section text */
-	.skill-category p {
-		font-size: 1rem;
-		line-height: 1.6;
-	}
-
-	@media (min-width: 768px) {
-		.skill-category p {
-			font-size: 1.1rem;
-		}
-	}
-
-	.built-with {
-		text-align: center;
-		padding: 2rem 0 3rem;
-		margin-top: 2rem;
-	}
-
-	.built-with p {
-		font-size: 1.2rem;
-		color: #c2bfbf;
-	}
-
-	.built-with a {
-		color: #ffffff;
-		border-bottom-color: rgba(170, 170, 170, 0.3);
-	}
-
-	.built-with a:hover {
+	.highlight {
 		color: #f7c66f;
-		border-bottom-color: #f7c66f;
 	}
 
-	.links .project-link {
-		display: inline-block;
-		padding: 1rem 2rem;
-		background-color: #1a1a1a;
-		color: #fff;
-		border: 2px solid #f7c66f;
-		border-radius: 8px;
-		text-decoration: none;
+	.content .interests .highlight {
+		color: #f7c66f;
 		font-weight: 500;
-		font-size: 1.2rem;
-		box-shadow: 0 4px 15px rgba(247, 198, 111, 0.3);
 	}
 
-	.view-project-button {
-		display: inline-block;
-		padding: 1rem 2rem;
-		background-color: #1a1a1a;
-		color: #fff;
-		border: 2px solid #f7c66f;
+	.keyword {
+		color: #f7c66f !important;
+		text-decoration: none !important;
+		cursor: text;
+	}
+	
+	.keyword:hover {
+		text-decoration: none !important;
+	}
+
+	.section-header {
+		background-color: rgba(26, 26, 26, 0.8);
 		border-radius: 8px;
-		text-decoration: none;
-		font-weight: 500;
-		font-size: 1.2rem;
-		box-shadow: 0 4px 15px rgba(247, 198, 111, 0.3);
+		padding: 1.5rem 2rem;
+		margin: 4rem 0 2rem;
+		width: 100%;
 	}
-
-	.name-section {
-		display: flex;
-		align-items: baseline;
-		justify-content: center;
-		gap: 0.5rem;
-		margin-bottom: 1.5rem;
-	}
-
-	.name-section h1 {
-		margin-bottom: 0;
-	}
-
-	.linkedin-link {
-		border: 2px solid #f7c66f;
-		box-shadow: 0 4px 15px rgba(247, 198, 111, 0.3);
-		border-radius: 4px;
-	}
-
-	.linkedin-link img {
-		width: 24px;
-		height: 24px;
-		filter: brightness(0) invert(1);
+	
+	.section-header h2 {
+		color: #f7c66f;
+		font-size: 2.2rem;
+		margin: 0;
+		text-align: left;
+		font-weight: 600;
 	}
 </style>
