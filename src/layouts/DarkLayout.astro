@@ -8,8 +8,8 @@ interface Props {
 }
 
 const { 
-  title = "Shah Jacob - Software Engineering Intern",
-  description = "CS student at Queens College, interested in backend/infra and distributed systems with experience in full-stack engineering.",
+  title = "Shah Jacob - Technical Sales & Product",
+  description = "CS student at Queens College graduating May 2025, pursuing sales and product roles for technical solutions where I can leverage my engineering background.",
   isHome = false
 } = Astro.props;
 ---
@@ -42,109 +42,137 @@ const {
     <main>
       <slot />
     </main>
+
+    <footer>
+      <p>© {new Date().getFullYear()} Shah Jacob • Last updated May 2025</p>
+      <p>
+        Built with <a href="https://astro.build">Astro</a> • 
+        <a href="https://github.com/shahjacobb/shah-jacob-portfolio">Source</a>
+      </p>
+    </footer>
+
+    <style is:global>
+      @font-face {
+        font-family: 'Geist Mono';
+        src: url('/fonts/GeistMono-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Geist Mono';
+        src: url('/fonts/GeistMono-Medium.woff2') format('woff2');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      :root {
+        --background: #0a0a0a;
+        --text: #ffffff;
+        --text-secondary: #888888;
+      }
+      
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: var(--background);
+        color: var(--text);
+        font-family: "Geist", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        position: fixed;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: rgba(10, 10, 10, 0.6);
+        backdrop-filter: blur(8px);
+        z-index: 100;
+      }
+
+      .logo a {
+        font-size: 2em;
+        font-weight: 600;
+        font-style: normal;
+        text-decoration: none;
+        color: var(--text);
+        transition: color 0.2s ease;
+      }
+
+      .logo a:hover {
+        color: #f7c66f;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        padding-right: 1rem;
+      }
+
+      .nav-links a {
+        font-family: "Merriweather", serif;
+        font-weight: 300;
+        font-style: italic;
+        color: #ffffff;
+        text-decoration: none;
+        margin-left: 2rem;
+        font-size: 1.4rem;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          padding: 1rem;
+        }
+        
+        .nav-links {
+          padding-right: 0.5rem;
+        }
+
+        .nav-links a {
+          margin-left: 1rem;
+          font-size: 1rem;
+        }
+      }
+
+      .nav-links a:hover {
+        color: #f7c66f;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 5rem 2rem 0;
+      }
+
+      footer {
+        margin-top: 4rem;
+        padding: 2rem 0;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #888;
+        border-top: 1px solid #333;
+      }
+      
+      footer p {
+        margin: 0.5rem 0;
+      }
+      
+      @media (max-width: 768px) {
+        footer {
+          padding: 1.5rem 0;
+          font-size: 0.8rem;
+        }
+      }
+    </style> 
   </body>
-</html>
-
-<style is:global>
-  @font-face {
-    font-family: 'Geist Mono';
-    src: url('/fonts/GeistMono-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Geist Mono';
-    src: url('/fonts/GeistMono-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  :root {
-    --background: #0a0a0a;
-    --text: #ffffff;
-    --text-secondary: #888888;
-  }
-  
-  html, body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--background);
-    color: var(--text);
-    font-family: "Geist", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    position: fixed;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: rgba(10, 10, 10, 0.6);
-    backdrop-filter: blur(8px);
-    z-index: 100;
-  }
-
-  .logo a {
-    font-size: 2em;
-    font-weight: 600;
-    font-style: normal;
-    text-decoration: none;
-    color: var(--text);
-    transition: color 0.2s ease;
-  }
-
-  .logo a:hover {
-    color: #f7c66f;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    padding-right: 1rem;
-  }
-
-  .nav-links a {
-    font-family: "Merriweather", serif;
-    font-weight: 300;
-    font-style: italic;
-    color: #ffffff;
-    text-decoration: none;
-    margin-left: 2rem;
-    font-size: 1.4rem;
-  }
-
-  @media (max-width: 768px) {
-    nav {
-      padding: 1rem;
-    }
-    
-    .nav-links {
-      padding-right: 0.5rem;
-    }
-
-    .nav-links a {
-      margin-left: 1rem;
-      font-size: 1rem;
-    }
-  }
-
-  .nav-links a:hover {
-    color: #f7c66f;
-  }
-
-  main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 5rem 2rem 0;
-  }
-</style> 
+</html> 
