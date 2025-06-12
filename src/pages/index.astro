@@ -1,6 +1,5 @@
 ---
 import DarkLayout from "../layouts/DarkLayout.astro";
-import ResumeButton from "../components/ResumeButton.astro";
 ---
 
 <DarkLayout isHome={true}>
@@ -10,14 +9,10 @@ import ResumeButton from "../components/ResumeButton.astro";
 		</div>
 		<div class="name-section">
 			<h1>Shah Jacob</h1>
-			<a href="https://www.linkedin.com/in/shah-jacob" class="linkedin-link" aria-label="LinkedIn Profile">
-				<img src="/images/LI-In-Bug.png" alt="LinkedIn" />
-			</a>
 		</div>
 		<div class="content">
 			<p class="intro">
-				Hi! I'm a computer science student at Queens College, graduating
-				in May 2025, now seeking roles in <a class="keyword">sales development</a> or <a class="keyword">product</a>.
+				Hi! I'm a Sales Development Representative at <a href="https://www.getdbt.com/" class="keyword">dbt Labs</a>, helping data teams transform their analytics workflows. I joined in June 2025 after graduating with my BA in Computer Science from Queens College in May 2025.
 			</p>
 
 			<p class="experience">
@@ -30,11 +25,6 @@ import ResumeButton from "../components/ResumeButton.astro";
 			<p class="interests">
 				I'm pursuing sales roles across <a class="keyword">data engineering</a>, <a class="keyword">developer tooling</a>, and <a class="keyword">large language models</a> where I can leverage my engineering background to solve customer problems.
 			</p>
-
-			<ResumeButton
-				driveLink="https://drive.google.com/file/d/1mIYb3x3mZJv7wVXiIOXWTkzuFMGYPp4U/view?usp=drive_link"
-				buttonText="View My Resume"
-			/>
 
 			<div class="section-header">
 				<h2>What I've built:</h2>
@@ -134,11 +124,6 @@ import ResumeButton from "../components/ResumeButton.astro";
 	h1 {
 		font-size: 3rem;
 		margin: 0;
-	}
-
-	.linkedin-link img {
-		width: 30px;
-		height: 30px;
 	}
 
 	.content {
