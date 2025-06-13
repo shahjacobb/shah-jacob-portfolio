@@ -15,15 +15,8 @@ import DarkLayout from "../layouts/DarkLayout.astro";
 				Hi! I'm a Sales Development Representative at <a href="https://www.getdbt.com/" class="keyword">dbt Labs</a>, helping data teams transform their analytics workflows. I joined in June 2025 after graduating with my BA in Computer Science from Queens College in May 2025.
 			</p>
 
-			<p class="experience">
-				I most recently interned at <a href="https://www.pharmesol.com/">Pharmesol AI</a>, 
-				helping out build out their backend APIs using <a href="https://fastapi.tiangolo.com/">FastAPI</a> 
-				and integrating LLM Voice Agents using <a href="https://retell.ai">Retell AI</a>. 
-				I also was responsible for creating dashboards in React using <a href="https://tremor.so/">TremorJS</a>.
-			</p>
-
 			<p class="interests">
-				I'm pursuing sales roles across <a class="keyword">data engineering</a>, <a class="keyword">developer tooling</a>, and <a class="keyword">large language models</a> where I can leverage my engineering background to solve customer problems.
+				I'm passionate about <a class="keyword">developer tooling</a> and <a class="keyword">data infrastructure</a> — the platforms and systems that empower engineering teams to build faster, operationalize data at scale, and deliver exceptional products.
 			</p>
 
 			<div class="section-header">
@@ -291,7 +284,11 @@ import DarkLayout from "../layouts/DarkLayout.astro";
 	}
 	
 	.keyword:hover {
-		text-decoration: none !important;
+		text-decoration: underline !important;
+	}
+
+	a.keyword {
+		cursor: pointer !important;
 	}
 
 	.section-header {
